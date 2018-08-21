@@ -6,6 +6,7 @@ const express = require('express');
 //npmPackage -- https://www.npmjs.com/package/hbs
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000; //Port for heroku.
 
 var app = express();
 
@@ -79,6 +80,8 @@ app.get('/bad', (request, response) => {
     errorMessage:'404 YOU SUCK!!!'
   });
 });
-app.listen(3000, () => {
-  console.log('Server is up on Port 3000');
+
+
+app.listen(port, () => {
+  console.log(`Server is up on Port ${port}` );
 });
