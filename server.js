@@ -31,11 +31,11 @@ app.use((request, response, next) => {
 //NOTE WITH OUT A NEXT() call Page shows Maintenance and stops here.
 // ORDER MATTERS -- if the App.use after this call is above, it will allow user 
 // to use.
-app.use((request, response, next) => {
-  response.render('maintenance.hbs', {
-    pageTitle: "UNDER MAINTENANCE FART FACES!!"
-  });
-});
+// app.use((request, response, next) => {
+//   response.render('maintenance.hbs', {
+//     pageTitle: "UNDER MAINTENANCE FART FACES!!"
+//   });
+// });
 
 app.use(express.static(__dirname + '/public'));
 
